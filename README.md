@@ -15,6 +15,12 @@ linker -o file.exe code.asm
 
 file.exe 指的是编译为 file.exe，code.asm 指的是把 code.asm 编译成 file.exe
 
+## 欢迎使用
+欢迎使用 Emerging 编程语言
+此语言为 Deep Learning Corporation 自主开发，其源代码与 i686 版本的 Emerging 源代码全部在此 GitHub 仓库。
+Emerging 源代码可用于学习，开发编程语言。
+我们可以把 .emg 文件代码使用 Emerging Win32 版本编译为 Win32 可执行文件，也可以用于编译别的，例如 Win64 可以通过 Emerging i686 版本编译。
+
 ## Include 头文件
 Win32 Windows API 定义：\include\windows.emg
 macOS Include 头文件：\include\macos.emg
@@ -23,8 +29,8 @@ stdio Include 头文件：\include\stdio.emg
 iostream Include 头文件：\include\iostream.emg
 
 ## 阅读 Emerging 文档
-如果你需要阅读 Emerging 文档以获取 Emerging 更多信息，可以阅读：Emerging 安装位置\emgdoc.pdf
-内包含语法教程
+如果你需要阅读 Emerging 文档以获取 Emerging 更多信息，可以阅读：Emerging 安装位置\emgdoc.pdf。
+内包含语法教程。
 
 ## 安装 Emerging
 如果需要 Emerging 安装程序，可以在此 GitHub 仓库点击 Releases → 下载 emerging-lang-1.0.0-win32-release-installer.exe
