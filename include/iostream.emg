@@ -1,0 +1,15 @@
+// Emerging 流式 I/O 库 (基于 stdio 封装)
+// 使用 cout, cin, endl 等
+
+extern int cout;      // 输出流标识符 (实际为文件描述符)
+extern int cin;       // 输入流标识符
+extern int endl;      // 换行符常量
+
+// 输出操作符 (模拟 C++ 风格)
+extern int operator_put(int stream, int val);      // 输出整数
+extern int operator_put(int stream, string s);     // 输出字符串
+extern int operator_put(int stream, int endl);     // 输出换行
+
+// 输入操作符
+extern int operator_get(int stream, int &val);     // 读入整数
+extern int operator_get(int stream, string &s);    // 读入字符串 (简单实现)

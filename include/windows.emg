@@ -1,0 +1,48 @@
+// Win32 Windows API 声明
+
+// 窗口与消息
+extern int MessageBoxA(int hWnd, string lpText, string lpCaption, int uType);
+extern int MessageBoxW(int hWnd, wstring lpText, wstring lpCaption, int uType);
+#define MessageBox MessageBoxA
+
+extern int CreateWindowExA(int dwExStyle, string lpClassName, string lpWindowName,
+                            int dwStyle, int x, int y, int nWidth, int nHeight,
+                            int hWndParent, int hMenu, int hInstance, int lpParam);
+extern int DefWindowProcA(int hWnd, int msg, int wParam, int lParam);
+extern int PostQuitMessage(int nExitCode);
+extern int GetMessageA(int lpMsg, int hWnd, int wMsgFilterMin, int wMsgFilterMax);
+extern int TranslateMessage(int lpMsg);
+extern int DispatchMessageA(int lpMsg);
+extern int RegisterClassExA(int wc);
+extern int ShowWindow(int hWnd, int nCmdShow);
+extern int UpdateWindow(int hWnd);
+
+// 进程与模块
+extern int GetModuleHandleA(string lpModuleName);
+extern int ExitProcess(int uExitCode);
+
+// 控制台
+extern int GetStdHandle(int nStdHandle);
+extern int WriteConsoleA(int hConsoleOutput, string lpBuffer, int nNumberOfCharsToWrite,
+                         int lpNumberOfCharsWritten, int lpReserved);
+extern int ReadConsoleA(int hConsoleInput, string lpBuffer, int nNumberOfCharsToRead,
+                        int lpNumberOfCharsRead, int lpReserved);
+
+// 文件系统
+extern int CreateFileA(string lpFileName, int dwDesiredAccess, int dwShareMode,
+                       int lpSecurityAttributes, int dwCreationDisposition,
+                       int dwFlagsAndAttributes, int hTemplateFile);
+extern int ReadFile(int hFile, string lpBuffer, int nNumberOfBytesToRead,
+                    int lpNumberOfBytesRead, int lpOverlapped);
+extern int WriteFile(int hFile, string lpBuffer, int nNumberOfBytesToWrite,
+                     int lpNumberOfBytesWritten, int lpOverlapped);
+extern int CloseHandle(int hObject);
+
+// 常用常量
+int STD_INPUT_HANDLE  = -10;
+int STD_OUTPUT_HANDLE = -11;
+int STD_ERROR_HANDLE  = -12;
+int INVALID_HANDLE_VALUE = -1;
+int NULL = 0;
+int TRUE = 1;
+int FALSE = 0;
