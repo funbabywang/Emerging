@@ -1,0 +1,51 @@
+// Emerging 编程语言 - macOS 平台接口
+// 基于 POSIX 和 Darwin 系统调用
+// 注意：所有指针参数均使用 int 类型表示内存地址
+
+// 标准 I/O
+extern int printf(int format, ...);          // format 为字符串地址
+extern int scanf(int format, ...);            // format 为字符串地址
+extern int putchar(int c);
+extern int getchar();
+extern int puts(int s);                       // s 为字符串地址
+
+// 文件操作
+extern int open(int pathname, int flags, int mode);   // pathname 为字符串地址
+extern int close(int fd);
+extern int read(int fd, int buf, int count);          // buf 为缓冲区地址
+extern int write(int fd, int buf, int count);         // buf 为缓冲区地址
+extern int lseek(int fd, int offset, int whence);
+extern int unlink(int pathname);                       // 删除文件
+
+// 内存管理
+extern int malloc(int size);                           // 返回内存地址
+extern int free(int ptr);                              // ptr 为内存地址
+
+// 进程控制
+extern int fork();
+extern int execve(int pathname, int argv, int envp);  // 参数为地址
+extern int wait(int status);                           // status 为地址
+extern int exit(int status);
+
+// 目录操作
+extern int opendir(int name);                          // name 为字符串地址
+extern int readdir(int dirp);                          // 返回 dirent 结构地址
+extern int closedir(int dirp);
+
+// 时间函数
+extern int time(int tloc);                             // tloc 为 time_t 地址
+
+// 常用常量
+int O_RDONLY   = 0x0000;
+int O_WRONLY   = 0x0001;
+int O_RDWR     = 0x0002;
+int O_CREAT    = 0x0040;
+int O_TRUNC    = 0x0200;
+int O_APPEND   = 0x0400;
+
+int SEEK_SET   = 0;
+int SEEK_CUR   = 1;
+int SEEK_END   = 2;
+
+int NULL       = 0;
+int EOF        = -1;

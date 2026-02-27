@@ -1,0 +1,31 @@
+// Emerging 标准输入输出库 (Win32控制台版本)
+// 函数使用 cdecl 调用约定，编译器会在符号前加下划线
+
+// 输出一个字符到标准输出
+extern int putchar(int c);
+
+// 从标准输入读取一个字符 (阻塞)
+extern int getchar();
+
+// 输出字符串到标准输出 (自动换行)
+extern int puts(string s);
+
+// 格式化输出到标准输出 (仅支持 %d, %s, %c)
+extern int printf(string format, ...);
+
+// 格式化输入 (简单实现，仅支持整数)
+extern int scanf(string format, ...);
+
+// 文件操作 (基于Windows HANDLE)
+extern int fopen(string filename, string mode);
+extern int fclose(int fp);
+extern int fprintf(int fp, string format, ...);
+extern int fscanf(int fp, string format, ...);
+extern int fgetc(int fp);
+extern int fputc(int c, int fp);
+
+// 常量
+int EOF = -1;
+int SEEK_SET = 0;
+int SEEK_CUR = 1;
+int SEEK_END = 2;
