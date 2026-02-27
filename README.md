@@ -29,6 +29,8 @@ iostream Include 头文件：\include\iostream.emg
 ## 安装 Emerging
 如果需要 Emerging 安装程序，可以在此 GitHub 仓库点击 Releases → 下载 emerging-lang-1.0.0-win32-release-installer.exe
 如果不需要安装程序，需要 Emerging 的内容，可以在此 GitHub 仓库点击 Releases → 下载 emerging-lang-1.0.0-win32-release.zip
+如果需要下载 i686 版本的 Emerging 语言的内容，可以在此 GitHub 仓库点击 Releases → 下载 i686-emerging-lang-1.0.0-release-zip
+如果需要下载 i686 版本的 Emerging 语言的安装程序，可以在此 GitHub 仓库点击 Releases → 下载 i686-emerging-lang-1.0.0-releases-installer.exe
 
 ## 致谢
 感谢您阅读 Emerging 编程语言 README！
